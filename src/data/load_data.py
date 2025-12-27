@@ -2,7 +2,8 @@ import pandas as pd
 from pathlib import Path
 from src.data.validate import validate_schema
 
-DATA_PATH = Path("data/raw/Titanic-Dataset.csv")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DATA_PATH = PROJECT_ROOT / "data" / "raw" / "Titanic-Dataset.csv"
 
 
 def load_raw_data():

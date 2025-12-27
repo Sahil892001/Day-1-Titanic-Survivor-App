@@ -11,3 +11,5 @@ env/
 
 # Jupyter
 .ipynb_checkpoints/
+
+*.egg-info/
