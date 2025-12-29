@@ -5,6 +5,9 @@ from sklearn.metrics import accuracy_score, classification_report
 
 from src.data.load_data import load_raw_data
 from src.preprocessing.pipeline import build_preprocessing_pipeline
+import joblib
+from pathlib import Path
+
 
 
 def train_model():
@@ -36,6 +39,15 @@ def train_model():
     print("Accuracy:", accuracy_score(y_test, y_pred))
     print("\nClassification Report:\n")
     print(classification_report(y_test, y_pred))
+
+    # Save model artifact
+    ARTIFACTS_DIR = Path("artifacts")
+    ARTIFACTS_DIR.mkdir(exist_ok=True)
+
+    model_path = ARTIFACTS_DIR / "titanic_model.joblib"
+    joblib.dump(model, model_path)
+
+    print(f"\nModel saved to: {model_path}")
 
     return model
 

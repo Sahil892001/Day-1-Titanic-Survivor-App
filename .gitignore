@@ -13,3 +13,4 @@ env/
 .ipynb_checkpoints/
 
 *.egg-info/
+artifacts/
