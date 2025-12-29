@@ -8,10 +8,15 @@ The focus of this project is on building a clean, reproducible ML pipeline and a
 
 ## Project Structure
 app/ # Streamlit inference app
+
 data/ # Raw dataset (immutable)
+
 notebooks/ # Exploratory Data Analysis (EDA)
+
 src/ # Production ML code
+
 scripts/ # Utility scripts
+
 artifacts/ # Trained model (ignored)
 
 
